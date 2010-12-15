@@ -81,11 +81,11 @@ On the command line: -
 
 Here are the packages I've currently got installed for DDP to work: -
 
-py26-lzma       /usr/ports/archivers/py-lzma/
-py26-numeric    /usr/ports/math/py-numeric/
-py26-pysqlite   /usr/ports/databases/py-pysqlite23/
-py26-serial     /usr/ports/comms/py-serial/
-python26        /usr/ports/lang/python/
+  * py26-lzma (/usr/ports/archivers/py-lzma/)
+  * py26-numeric (/usr/ports/math/py-numeric/)
+  * py26-pysqlite (/usr/ports/databases/py-pysqlite23/)
+  * py26-serial (/usr/ports/comms/py-serial/)
+  * python26  (/usr/ports/lang/python/)
 
 You can install them in any order, you might want to make sure the your ports collection is up-to-date.  Python 2.6 is normally installed by default so don't worry about that one.
 
