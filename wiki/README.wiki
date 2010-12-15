@@ -37,6 +37,7 @@ For license and copyright, please see the LICENSE file.
   # Initial release, bit rough on the edges.  Basics working.
 
 
+
 =Usage=
 
 On the command line: -
@@ -70,6 +71,7 @@ On the command line: -
 
   # Some kind of authentication for the BBS example code, maybe a public/private key pair...
   # Error correction on the packets
+
 
 
 =Installation=
@@ -111,6 +113,7 @@ Grab pysqlite from here for your version of Python: http://code.google.com/p/pys
 Once this is all done, uncompress DDP in any folder but you may find it easier if extract to your system drive (usually C:\).  Then fire up the command prompt and change the directory to where you extracted DDP to and try running some of the examples, if you get a message about it cannot find Python change your PATH environment to include the Python installation directory and rerun the command prompt.
 
 
+
 =FAQ=
 
 Q. What are the dependencies for this program?
@@ -127,6 +130,7 @@ A. Let me know by raising it as an issue so I can fix it in the next version.
 
 Q. I would like a feature that's not in DDP...
 A. I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
+
 
 
 =Legal=
