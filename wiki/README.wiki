@@ -59,10 +59,10 @@ On the command line: -
 
   # `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
   # Contains example code for: -
-	> A very basic BBS server and client using the DDP protocol
-	> A basic IM chat program using the DDP protocol
-	> A basic file transfer program using the DDP protocol
-	> A *proof-of-concept* HTTP proxy server and client using the DDP protocol
+	* A very basic BBS server and client using the DDP protocol
+	* A basic IM chat program using the DDP protocol
+	* A basic file transfer program using the DDP protocol
+	* A *proof-of-concept* HTTP proxy server and client using the DDP protocol
   # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP) for guidance.
   # TCP/IP supported for sending packets over the LAN/WAN or even using D-STAR (DD).
 
