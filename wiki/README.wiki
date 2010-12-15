@@ -7,9 +7,10 @@ For license and copyright, please see the LICENSE file.
 
 =Notes=
 ==v0.3.0==
-1. When using the RS-232 backend, the RTS is set to high (serial.setRTS(True)) when transmitting and low (serial.setRTS(False)) when receiving.
-2. A small 75ms delay is performed before sending the actual data, the same delay is done after the data has been sent.
-3. Introduced a new 8-bit binary mode, mainly for using DDP over a modem like my GMSK one.  Just set "specification = 1" to enable it, otherwise set it to 0 to use the original 7-bit text mode.  The example code XML files will expose this after they have updated.  `*`PLEASE NOTE THAT THE 8-BIT MODE CURRENTLY DOESN'T WORK WITH FLDIGI AS THE BACKEND, I'M CURRENTLY TRYING TO RESOLVE THIS`*`
+
+#. When using the RS-232 backend, the RTS is set to high (serial.setRTS(True)) when transmitting and low (serial.setRTS(False)) when receiving.
+#. A small 75ms delay is performed before sending the actual data, the same delay is done after the data has been sent.
+#. Introduced a new 8-bit binary mode, mainly for using DDP over a modem like my GMSK one.  Just set "specification = 1" to enable it, otherwise set it to 0 to use the original 7-bit text mode.  The example code XML files will expose this after they have updated.  `*`PLEASE NOTE THAT THE 8-BIT MODE CURRENTLY DOESN'T WORK WITH FLDIGI AS THE BACKEND, I'M CURRENTLY TRYING TO RESOLVE THIS`*`
 4. Packets are now sent with a preample using the characters "\xcc", again this is mainly to add the GMSK modem but otherwise won't harm anything
 5. receiveData`*`() routines now return the data already reconstructed, this reduces the user end code.  Please review the code examples for this new behavour.
 6. A HTTP proxy server and client code has been wrote as `*`proof of concept`*`.  You will need a real proxy server (like Squid - http://www.squid-cache.org) for my code to forward the packets onto (the upstream server in the XML config), don't expect this to run quick!
