@@ -118,18 +118,27 @@ Once this is all done, uncompress DDP in any folder but you may find it easier i
 =FAQ=
 
 Q. What are the dependencies for this program?
+
 A. Python v2.6 or greater.  Modules used are base64, collections, hashlib, math, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
+
 Q. What operating systems does it support?
+
 A. I develop and test DDP with FreeBSD 8.1, it should work in other POSIX compliant operating systems as well other distros of Linux.  I have also tested it under MS Windows and haven't seen any problems.
 
+
 Q. Can I create (port) of DDP?
+
 A. By all means! Be sure to read the LICENSE as your port will inherit the license.
 
+
 Q. I've found a bug! What do I do?
+
 A. Let me know by raising it as an issue so I can fix it in the next version.
 
+
 Q. I would like a feature that's not in DDP...
+
 A. I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
 
 
