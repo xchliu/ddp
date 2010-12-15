@@ -1,6 +1,4 @@
-#summary LICENSE
 #labels Featured
-
 ----
 
  Copyright/License Notice (BSD License)                                
