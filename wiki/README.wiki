@@ -11,10 +11,10 @@ v0.3.0
 ^^^^^^
 1. When using the RS-232 backend, the RTS is set to high (serial.setRTS(True)) when transmitting and low (serial.setRTS(False)) when receiving.
 2. A small 75ms delay is performed before sending the actual data, the same delay is done after the data has been sent.
-3. Introduced a new 8-bit binary mode, mainly for using DDP over a modem like my GMSK one.  Just set "specification = 1" to enable it, otherwise set it to 0 to use the original 7-bit text mode.  The example code XML files will expose this after they have updated.  *PLEASE NOTE THAT THE 8-BIT MODE CURRENTLY DOESN'T WORK WITH FLDIGI AS THE BACKEND, I'M CURRENTLY TRYING TO RESOLVE THIS*
+3. Introduced a new 8-bit binary mode, mainly for using DDP over a modem like my GMSK one.  Just set "specification = 1" to enable it, otherwise set it to 0 to use the original 7-bit text mode.  The example code XML files will expose this after they have updated.  `*`PLEASE NOTE THAT THE 8-BIT MODE CURRENTLY DOESN'T WORK WITH FLDIGI AS THE BACKEND, I'M CURRENTLY TRYING TO RESOLVE THIS`*`
 4. Packets are now sent with a preample using the characters "\xcc", again this is mainly to add the GMSK modem but otherwise won't harm anything
-5. receiveData*() routines now return the data already reconstructed, this reduces the user end code.  Please review the code examples for this new behavour.
-6. A HTTP proxy server and client code has been wrote as *proof of concept*.  You will need a real proxy server (like Squid - http://www.squid-cache.org) for my code to forward the packets onto (the upstream server in the XML config), don't expect this to run quick!
+5. receiveData`*`() routines now return the data already reconstructed, this reduces the user end code.  Please review the code examples for this new behavour.
+6. A HTTP proxy server and client code has been wrote as `*`proof of concept`*`.  You will need a real proxy server (like Squid - http://www.squid-cache.org) for my code to forward the packets onto (the upstream server in the XML config), don't expect this to run quick!
 
 v0.2.1
 ^^^^^^
@@ -55,7 +55,7 @@ On the command line: -
 
 Current Features
 ================
-0. *** You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... ***
+0. `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
 1. Contains example code for: -
 	> A very basic BBS server and client using the DDP protocol
 	> A basic IM chat program using the DDP protocol
@@ -77,15 +77,11 @@ FreeBSD
 ^^^^^^^
 Here are the packages I've currently got installed for DDP to work: -
 
-================================================================================================================================
-Name			|	Download From	|	Directory
-================+===================+===========================================================================================
-py26-lzma		|	Ports			|	/usr/ports/archivers/py-lzma/
-py26-numeric	|	Ports			|	/usr/ports/math/py-numeric/
-py26-pysqlite	|	Ports			|	/usr/ports/databases/py-pysqlite23/
-py26-serial		|	Ports			|	/usr/ports/comms/py-serial/
-python26		|	Ports			|	/usr/ports/lang/python/
-================================================================================================================================
+py26-lzma       | /usr/ports/archivers/py-lzma/
+py26-numeric    | /usr/ports/math/py-numeric/
+py26-pysqlite   | /usr/ports/databases/py-pysqlite23/
+py26-serial     | /usr/ports/comms/py-serial/
+python26        | /usr/ports/lang/python/
 
 You can install them in any order, you might want to make sure the your ports collection is up-to-date.  Python 2.6 is normally installed by default so don't worry about that one.
 
@@ -117,7 +113,7 @@ Once this is all done, uncompress DDP in any folder but you may find it easier i
 FAQ
 ===
 Q. What are the dependencies for this program?
-A. Python v2.6 or greater.  Modules used are base64, collections, hashlib, math, pylzma*, serial*, socket, threading, time and xmlrpclib.  * - External package which requires installing since it's not normally installed by default.
+A. Python v2.6 or greater.  Modules used are base64, collections, hashlib, math, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
 Q. What operating systems does it support?
 A. I develop and test DDP with FreeBSD 8.1, it should work in other POSIX compliant operating systems as well other distros of Linux.  I have also tested it under MS Windows and haven't seen any problems.
