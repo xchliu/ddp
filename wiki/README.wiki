@@ -5,10 +5,8 @@ Link: http://code.google.com/p/ddp/
 For license and copyright, please see the LICENSE file.
 
 
-Notes
-=====
-v0.3.0
-^^^^^^
+=Notes=
+==v0.3.0==
 1. When using the RS-232 backend, the RTS is set to high (serial.setRTS(True)) when transmitting and low (serial.setRTS(False)) when receiving.
 2. A small 75ms delay is performed before sending the actual data, the same delay is done after the data has been sent.
 3. Introduced a new 8-bit binary mode, mainly for using DDP over a modem like my GMSK one.  Just set "specification = 1" to enable it, otherwise set it to 0 to use the original 7-bit text mode.  The example code XML files will expose this after they have updated.  `*`PLEASE NOTE THAT THE 8-BIT MODE CURRENTLY DOESN'T WORK WITH FLDIGI AS THE BACKEND, I'M CURRENTLY TRYING TO RESOLVE THIS`*`
@@ -16,13 +14,11 @@ v0.3.0
 5. receiveData`*`() routines now return the data already reconstructed, this reduces the user end code.  Please review the code examples for this new behavour.
 6. A HTTP proxy server and client code has been wrote as `*`proof of concept`*`.  You will need a real proxy server (like Squid - http://www.squid-cache.org) for my code to forward the packets onto (the upstream server in the XML config), don't expect this to run quick!
 
-v0.2.1
-^^^^^^
+==v0.2.1==
 1. TCP/IP is now supported as a backend, set "BackendDataMode" to "TCP/IP" and set "BackendHostname" to the interface address to listen on and set "BackendPort" to the port number to listen on.  Please pay particular attention to the "PacketFromIP", "PacketFromPort", "PacketToIP", and "PacketToPort" in the settings XML - these are contained in the packet to allow it to route back to you again.  Normally, the IPs will be the public address you're on this is useful if you are using NAT.  At this stage, TCP/IP support is still experimental as it currently shows proof of concept.  The way this backend works may change in the future.  All packets are sent and received using UDP.
 2. Since TCP/IP is supported, there's no reason why it wouldn't work with D-STAR (DD) now.
 
-v0.2.0
-^^^^^^
+==v0.2.0==
  1. This release contains a tweak to the DDP code to include a TX/RX delay to allow recover time of the rig.  It also happens to allow me to use only one copy of fldigi rather than two for testing purposes!
  2. Default protocol is now PSK500R when using fldigi, this is supported in fldigi 3.20.X and above (I compile my own version of fldigi under FreeBSD since the maintainer no longer maintains it), I would recommend to upgrade to at least this version.
  3. The checksum algorithm has now been changed from CRC32 to SHA1.
@@ -36,13 +32,11 @@ v0.2.0
 11. Base API improved, various improves made with new subroutines - code examples modified.
 12. The protocol will not maintain backwards compatibility until we reach v1.0.0, incompatible packets will be dropped.
 
-v0.1.0
-^^^^^^
+==v0.1.0==
 1. Initial release, bit rough on the edges.  Basics working.
 
 
-Usage
-=====
+=Usage=
 On the command line: -
 
 % python bbs_client.py
@@ -53,8 +47,7 @@ On the command line: -
 % python im_chat.py
 
 
-Current Features
-================
+=Current Features=
 0. `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
 1. Contains example code for: -
 	> A very basic BBS server and client using the DDP protocol
@@ -65,16 +58,14 @@ Current Features
 3. TCP/IP supported for sending packets over the LAN/WAN or even using D-STAR (DD).
 
 
-Future Features
-===============
+=Future Features=
 1. Some kind of authentication for the BBS example code, maybe a public/private key pair...
 2. Error correction on the packets
 
 
-Installation
-============
-FreeBSD
-^^^^^^^
+=Installation=
+
+==FreeBSD==
 Here are the packages I've currently got installed for DDP to work: -
 
 py26-lzma       | /usr/ports/archivers/py-lzma/
@@ -86,18 +77,15 @@ python26        | /usr/ports/lang/python/
 You can install them in any order, you might want to make sure the your ports collection is up-to-date.  Python 2.6 is normally installed by default so don't worry about that one.
 
 
-Linux
-^^^^^
+==Linux==
 Untested - But you should find the above packages for your distro.  I don't expect any problems running DDP on Linux.
 
 
-MacOS
-^^^^^
+==MacOS==
 Untested.
 
 
-Microsoft Windows
-^^^^^^^^^^^^^^^^^
+==Microsoft Windows==
 Pylzma doesn't appear to have a package for Win32 so we have to use the egg...
 
 The easiest way to install the pylzma component on for Windows is to first install Python Eggs.  Installing PE is beyond the scope of this README, so visit http://mrtopf.de/blog/english-posts/a-small-introduction-to-python-eggs/ and goto the section "Where do I find Python Eggs?" you'll see download link for "ez_setup.py".
@@ -110,8 +98,7 @@ Grab pysqlite from here for your version of Python: http://code.google.com/p/pys
 Once this is all done, uncompress DDP in any folder but you may find it easier if extract to your system drive (usually C:\).  Then fire up the command prompt and change the directory to where you extracted DDP to and try running some of the examples, if you get a message about it cannot find Python change your PATH environment to include the Python installation directory and rerun the command prompt.
 
 
-FAQ
-===
+=FAQ=
 Q. What are the dependencies for this program?
 A. Python v2.6 or greater.  Modules used are base64, collections, hashlib, math, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
@@ -128,8 +115,7 @@ Q. I would like a feature that's not in DDP...
 A. I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
 
 
-Legal
-=====
+=Legal=
 I am in no way affiliated or in partnership with Google, Fldigi, Icom, Yaesu, Microsoft, or anyone else.
 
 <EOF>
