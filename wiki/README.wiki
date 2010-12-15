@@ -107,7 +107,7 @@ Pylzma doesn't appear to have a package for Win32 so we have to use the egg...
 The easiest way to install the pylzma component on for Windows is to first install Python Eggs.  Installing PE is beyond the scope of this README, so visit http://mrtopf.de/blog/english-posts/a-small-introduction-to-python-eggs/ and goto the section "Where do I find Python Eggs?" you'll see download link for "ez_setup.py".
 Download and install that.  Once that's done, grab the latest egg file for your Python version from http://pypi.python.org/pypi/pylzma/0.4.2 and install using "easy_install".
 
-You can grab the latest pyserial pacakge for Windows from here: http://pypi.python.org/pypi/pyserial/2.5
+You can grab the latest pyserial package for Windows from here: http://pypi.python.org/pypi/pyserial/2.5
 
 Grab pysqlite from here for your version of Python: http://code.google.com/p/pysqlite/downloads/list
 
