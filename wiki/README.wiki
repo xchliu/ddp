@@ -42,6 +42,7 @@ For license and copyright, please see the LICENSE file.
 On the command line: -
 
 `% python bbs_client.py`
+
 `% python bbs_server.py`
 
 `% python file_transfer.py`
@@ -131,5 +132,3 @@ A. I'm currently not accepting feature requests as DDP is a protocol not a "fina
 =Legal=
 
 I am in no way affiliated or in partnership with Google, Fldigi, Icom, Yaesu, Microsoft, or anyone else.
-
-<EOF>
