@@ -42,29 +42,29 @@ For license and copyright, please see the LICENSE file.
 On the command line: -
 
 `% python bbs_client.py`
-% python bbs_server.py
-% python file_transfer.py
-% python httpproxy_server.py
-% python httpproxy_client.py
-% python im_chat.py
+`% python bbs_server.py`
+`% python file_transfer.py`
+`% python httpproxy_server.py`
+`% python httpproxy_client.py`
+`% python im_chat.py`
 
 
 =Current Features=
 
-0. `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
-1. Contains example code for: -
+  # `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
+  # Contains example code for: -
 	> A very basic BBS server and client using the DDP protocol
 	> A basic IM chat program using the DDP protocol
 	> A basic file transfer program using the DDP protocol
 	> A *proof-of-concept* HTTP proxy server and client using the DDP protocol
-2. You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP) for guidance.
-3. TCP/IP supported for sending packets over the LAN/WAN or even using D-STAR (DD).
+  # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP) for guidance.
+  # TCP/IP supported for sending packets over the LAN/WAN or even using D-STAR (DD).
 
 
 =Future Features=
 
-1. Some kind of authentication for the BBS example code, maybe a public/private key pair...
-2. Error correction on the packets
+  # Some kind of authentication for the BBS example code, maybe a public/private key pair...
+  # Error correction on the packets
 
 
 =Installation=
@@ -73,11 +73,11 @@ On the command line: -
 
 Here are the packages I've currently got installed for DDP to work: -
 
-py26-lzma       | /usr/ports/archivers/py-lzma/
-py26-numeric    | /usr/ports/math/py-numeric/
-py26-pysqlite   | /usr/ports/databases/py-pysqlite23/
-py26-serial     | /usr/ports/comms/py-serial/
-python26        | /usr/ports/lang/python/
+py26-lzma       /usr/ports/archivers/py-lzma/
+py26-numeric    /usr/ports/math/py-numeric/
+py26-pysqlite   /usr/ports/databases/py-pysqlite23/
+py26-serial     /usr/ports/comms/py-serial/
+python26        /usr/ports/lang/python/
 
 You can install them in any order, you might want to make sure the your ports collection is up-to-date.  Python 2.6 is normally installed by default so don't worry about that one.
 
