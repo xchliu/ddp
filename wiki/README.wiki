@@ -42,7 +42,6 @@ For license and copyright, please see the LICENSE file.
 On the command line: -
 
 `% python bbs_client.py`
-
 `% python bbs_server.py`
 
 `% python file_transfer.py`
