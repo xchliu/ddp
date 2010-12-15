@@ -16,32 +16,32 @@ For license and copyright, please see the LICENSE file.
   # A HTTP proxy server and client code has been wrote as `*`proof of concept`*`.  You will need a real proxy server (like Squid - http://www.squid-cache.org) for my code to forward the packets onto (the upstream server in the XML config), don't expect this to run quick!
 
 ==v0.2.1==
-1. TCP/IP is now supported as a backend, set "BackendDataMode" to "TCP/IP" and set "BackendHostname" to the interface address to listen on and set "BackendPort" to the port number to listen on.  Please pay particular attention to the "PacketFromIP", "PacketFromPort", "PacketToIP", and "PacketToPort" in the settings XML - these are contained in the packet to allow it to route back to you again.  Normally, the IPs will be the public address you're on this is useful if you are using NAT.  At this stage, TCP/IP support is still experimental as it currently shows proof of concept.  The way this backend works may change in the future.  All packets are sent and received using UDP.
-2. Since TCP/IP is supported, there's no reason why it wouldn't work with D-STAR (DD) now.
+  # TCP/IP is now supported as a backend, set "BackendDataMode" to "TCP/IP" and set "BackendHostname" to the interface address to listen on and set "BackendPort" to the port number to listen on.  Please pay particular attention to the "PacketFromIP", "PacketFromPort", "PacketToIP", and "PacketToPort" in the settings XML - these are contained in the packet to allow it to route back to you again.  Normally, the IPs will be the public address you're on this is useful if you are using NAT.  At this stage, TCP/IP support is still experimental as it currently shows proof of concept.  The way this backend works may change in the future.  All packets are sent and received using UDP.
+  # Since TCP/IP is supported, there's no reason why it wouldn't work with D-STAR (DD) now.
 
 ==v0.2.0==
- 1. This release contains a tweak to the DDP code to include a TX/RX delay to allow recover time of the rig.  It also happens to allow me to use only one copy of fldigi rather than two for testing purposes!
- 2. Default protocol is now PSK500R when using fldigi, this is supported in fldigi 3.20.X and above (I compile my own version of fldigi under FreeBSD since the maintainer no longer maintains it), I would recommend to upgrade to at least this version.
- 3. The checksum algorithm has now been changed from CRC32 to SHA1.
- 4. The transmitData() routine is aware of a: Packets which require to be ACK'ed to confirm they were received (like with TCP) and b: Packets not to bother ACK'ing them (like with UDP).  This is handled automatically by the receiveData() routine, TCP mode is set by default for the transmitData() routine.
- 5. The BBS server and client now have XML setting files and allows the default datamode to be changed.
- 6. D-STAR (DV) is now supported as a backend, set "BackendDataMode" to "D-STAR" and the COM port that your rig is on for the "BackendHostname" e.g. "/dev/ttyu0", and set the "BackendPort" to the serial parameters e.g. "9600/8/N/1".
- 7. Wrote a IM chat program for sending short messages to other users.
- 8. Improved the timeout coding, now uses time.time().
- 9. Wrote a file transfer program for sending files to other users.
-10. Since D-STAR (DV) is supported, I've included support to send data over the serial port, uses same parameters as D-STAR (DV) mentioned above except set "BackendDataMode" to "RS-232".  This allows any new rigs which give direct access to RS-232 for sending and receiving data to work with DDP.
-11. Base API improved, various improves made with new subroutines - code examples modified.
-12. The protocol will not maintain backwards compatibility until we reach v1.0.0, incompatible packets will be dropped.
+  # This release contains a tweak to the DDP code to include a TX/RX delay to allow recover time of the rig.  It also happens to allow me to use only one copy of fldigi rather than two for testing purposes!
+  # Default protocol is now PSK500R when using fldigi, this is supported in fldigi 3.20.X and above (I compile my own version of fldigi under FreeBSD since the maintainer no longer maintains it), I would recommend to upgrade to at least this version.
+  # The checksum algorithm has now been changed from CRC32 to SHA1.
+  # The transmitData() routine is aware of a: Packets which require to be ACK'ed to confirm they were received (like with TCP) and b: Packets not to bother ACK'ing them (like with UDP).  This is handled automatically by the receiveData() routine, TCP mode is set by default for the transmitData() routine.
+  # The BBS server and client now have XML setting files and allows the default datamode to be changed.
+  # D-STAR (DV) is now supported as a backend, set "BackendDataMode" to "D-STAR" and the COM port that your rig is on for the "BackendHostname" e.g. "/dev/ttyu0", and set the "BackendPort" to the serial parameters e.g. "9600/8/N/1".
+  # Wrote a IM chat program for sending short messages to other users.
+  # Improved the timeout coding, now uses time.time().
+  # Wrote a file transfer program for sending files to other users.
+  # Since D-STAR (DV) is supported, I've included support to send data over the serial port, uses same parameters as D-STAR (DV) mentioned above except set "BackendDataMode" to "RS-232".  This allows any new rigs which give direct access to RS-232 for sending and receiving data to work with DDP.
+  # Base API improved, various improves made with new subroutines - code examples modified.
+  # The protocol will not maintain backwards compatibility until we reach v1.0.0, incompatible packets will be dropped.
 
 ==v0.1.0==
-1. Initial release, bit rough on the edges.  Basics working.
+  # Initial release, bit rough on the edges.  Basics working.
 
 
 =Usage=
 
 On the command line: -
 
-% python bbs_client.py
+`% python bbs_client.py`
 % python bbs_server.py
 % python file_transfer.py
 % python httpproxy_server.py
