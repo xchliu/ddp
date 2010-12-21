@@ -10,7 +10,7 @@ For license and copyright, please see the LICENSE file.
 
 ==v0.3.1 - 21st December 2010 ==
 
-  # 1. 8-bit binary mode now works with fldigi.  HOWEVER, since I can't send the whole 8-bit character set to fldigi the binary data is first encoded in hex before transmitting.  This is a limitation with fldigi, not DDP or PSK.
+  # 8-bit binary mode now works with fldigi.  HOWEVER, since I can't send the whole 8-bit character set to fldigi the binary data is first encoded in hex before transmitting.  This is a limitation with fldigi, not DDP or PSK.
   # Default TX wait time is now 500ms.
   # The packet is now scrambled (using Python's random module) to avoid long streams of zeros, ones, or patterns - notice the word SCRAMBLED not encrypted.  Simple but seems to do the job.  The scrambler only gets used for the 8-bit specification.
   # Reed-Solomon parity checking now available on the 8-bit protocol and will automatically be used if the "pyreedsolomon" directory is present, if you don't want this just rename the directory.  Used *with* permission from https://github.com/brownan/Reed-Solomon - Thanks Andrew.  *WILL NOT BE USED WHEN USING FLDIGI*
