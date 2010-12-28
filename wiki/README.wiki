@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.3.1 on 21/12/2010
+Danny's Digital Packet - Release v0.3.2 on 28/12/2010
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,17 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.3.2 - 28th December 2010==
+
+  # Tweaked the 8-bit protocol to correctly use the preample.
+  # Includes a few code changes for DDV, but changes aren't 100% complete for DDV.
+  # `*`codeReedSolomon() routines now parses the data in chunks rather than byte-per-byte.  If the chunk is too small it will be padded with "\x00".
+  # The default Reed-Solomon coder is now (64,32), when running in debug mode the N, K, S, and Lmax (not part of Reed-Solomon) values are shown.  Lmax is maximum byte loss shown as a percentage (just thought it was nice to know).  Overheads will now be around 150%.
+  # Reduced the TX hangtime when using fldigi and RS-232.
+  # isTX() routine now uses the RTS state when using RS-232.
+  # New ptt() routine handles keying up the modem over RS-232.
+
 
 ==v0.3.1 - 21st December 2010 ==
 
