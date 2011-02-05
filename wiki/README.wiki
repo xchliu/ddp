@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.3.2 on 28/12/2010
+Danny's Digital Packet - Release v0.3.3 on 05/02/2011
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,11 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.3.3 - 5th February 2011==
+
+  # DDP will now show you its license when initialising, just a reminder.
+  # When using Reed-Solomon, interleaving will now be used to improve the correction factor.
 
 ==v0.3.2 - 28th December 2010==
 
