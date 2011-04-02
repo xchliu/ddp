@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.3.3 on 05/02/2011
+Danny's Digital Packet - Release v0.4.0 on 02/04/2011
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,18 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.4.0 - 2nd April 2011==
+
+  # Changed the way ptt() is handled to reduce dekeying when it isn't necessary.
+  # DDP now has an additional data mode called "EXTENSION", this allows easy extension to the DDP base class - DDV uses this method.
+  # Added more coding for DDV, so far DDV will only work on Unix-like OS'es due to the OSS audio module (ossaudiodev) in Python.  Also due to the Codec2 codec DDV now uses.  This now makes DDP fully aware of DDV, DDV is class extension.
+  # New data mode called "GMSK" for when using a RS-232 GMSK modem, uses same parameters for the RS-232 backend.
+  # If PyLZMA is not available (due to any reason), DDP will automatically switch to the built-in GZIP module instead for it's default compression.
+  # The operating system is now detected on startup and will display any warnings and/or errors when running on that specific OS.
+  # PySerial is no longer a required module.  It's only imported when using the RS-232 backend, so if you only use FLDIGI you no longer need to install PySerial.
+  # Example code has been tidied and includes some extra exception trapping.
+  # Seperated out some of the subroutines for easier overloading and testing.
 
 ==v0.3.3 - 5th February 2011==
 
