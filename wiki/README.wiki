@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.4.0 on 02/04/2011
+Danny's Digital Packet - Release v0.4.1 on 23/04/2011
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,15 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.4.1 - 23rd April 2011==
+
+  # Tweaked code to support repeating packets transparently.
+  # Repeater code now released.  Take a look in examples directory.
+  # The default Reed-Solomon coder is now (64,48), which gives a max of 12.5% packet loss.
+  # TCP/IP (UDP) support has been dropped, let's keep this project pure RF.
+  # Base64 de/encoding has now been moved to Base128, should shave off a few bytes of the packet size.
+  # New example code showing how DDP can be used for emergency communications (EmComm).  Have a look in the examples directory.
 
 ==v0.4.0 - 2nd April 2011==
 
@@ -86,16 +95,13 @@ For license and copyright, please see the LICENSE file.
 On the command line: -
 
 `% python bbs_client.py`
-
 `% python bbs_server.py`
-
+`% python emcomm.py`
 `% python file_transfer.py`
-
 `% python httpproxy_server.py`
-
 `% python httpproxy_client.py`
-
 `% python im_chat.py`
+`% python repeater.py`
 
 
 =Current Features=
@@ -106,6 +112,8 @@ On the command line: -
 	* A basic IM chat program using the DDP protocol
 	* A basic file transfer program using the DDP protocol
 	* A *proof-of-concept* HTTP proxy server and client using the DDP protocol
+	* A simple repeater for repeating DDP packets using the DDP protocol
+	* A basic program for automating passing messages for EmComm using the DDP protocol
   # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP) for guidance.
   # TCP/IP supported for sending packets over the LAN/WAN or even using D-STAR (DD).  Although this code is mainly proof-of-concept.
   # Error correction on the packets using Reed-Solomon(3,1).
