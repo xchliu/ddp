@@ -95,12 +95,19 @@ For license and copyright, please see the LICENSE file.
 On the command line: -
 
 `% python bbs_client.py`
+
 `% python bbs_server.py`
+
 `% python emcomm.py`
+
 `% python file_transfer.py`
+
 `% python httpproxy_server.py`
+
 `% python httpproxy_client.py`
+
 `% python im_chat.py`
+
 `% python repeater.py`
 
 
