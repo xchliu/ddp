@@ -10,8 +10,6 @@ For license and copyright, please see the LICENSE file.
 
 ==v0.4.2 - 29th April 2011==
 
-v0.4.2 - 29th April 2011
-^^^^^^^^^^^^^^^^^^^^^^^^
   # PyPNG is included for parsing PNG files.  Used *with* permission from http://code.google.com/p/pypng/ - Thanks David.
   # New example code showing how DDP can be used for sending and receiving faxes.  Have a look in the examples directory.  *Please note that only PNG files are supported.*
   # receiveDataFromAny() routine has been tweaked so it can ignore FIN packets, instead it will just return a single packet.
