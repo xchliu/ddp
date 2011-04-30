@@ -172,39 +172,39 @@ The preferred method for using DDP on Windows is by using Cygwin.  Download the 
 
 =FAQ=
 
-Q. What are the dependencies for this program?
+*What are the dependencies for this program?*
 
-A. Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
-
-
-Q. What operating systems does it support?
-
-A. I develop and test DDP with FreeBSD 8.1, it should work in other POSIX compliant operating systems as well other distros of Linux.  I have also tested it under MS Windows and haven't seen any problems.
+Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
 
-Q. Can I create (port) of DDP?
+*What operating systems does it support?*
 
-A. By all means! Be sure to read the LICENSE as your port will inherit the license.
-
-
-Q. I've found a bug! What do I do?
-
-A. Let me know by raising it as an issue so I can fix it in the next version.
+I develop and test DDP with FreeBSD 8.1, it should work in other POSIX compliant operating systems as well other distros of Linux.  I have also tested it under MS Windows and haven't seen any problems.
 
 
-Q. I would like a feature that's not in DDP...
+*Can I create (port) of DDP?*
 
-A. I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
-
-
-Q. Can/Will you make DDP compatible with the existing packet radio system?
-
-A. No, DDP is aiming to replace it entirely.  However, there is nothing stopping someone from writing a wrapper program which does this - I will not write this myself and/or provide support to perform this.  DDP has many more features than the old packet system and it's actually faster when running over HF, DDP uses PSK500R by default which gives around 500 baud vs 300 baud for the old system.  DDP can also go crossband and specifications with its repeater code.
+By all means! Be sure to read the LICENSE as your port will inherit the license.
 
 
-Q. When using the FLDIGI backend, can I use another datamode?
+*I've found a bug! What do I do?*
 
-A. Yes you can, just specify which datamode you want to use (in-case of the examples just change it in the XML file).  I prefer using PSK myself but you should not have any problems using another mode which supports the full ASCII character like MFSK (my second preferred datamode).  So using a datamode like RTTY won't work.
+Let me know by raising it as an issue so I can fix it in the next version.
+
+
+*I would like a feature that's not in DDP...*
+
+I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
+
+
+*Can/Will you make DDP compatible with the existing packet radio system?*
+
+No, DDP is aiming to replace it entirely.  However, there is nothing stopping someone from writing a wrapper program which does this - I will not write this myself and/or provide support to perform this.  DDP has many more features than the old packet system and it's actually faster when running over HF, DDP uses PSK500R by default which gives around 500 baud vs 300 baud for the old system.  DDP can also go crossband and specifications with its repeater code.
+
+
+*When using the FLDIGI backend, can I use another datamode?*
+
+Yes you can, just specify which datamode you want to use (in-case of the examples just change it in the XML file).  I prefer using PSK myself but you should not have any problems using another mode which supports the full ASCII character like MFSK (my second preferred datamode).  So using a datamode like RTTY won't work.
 
 
 
