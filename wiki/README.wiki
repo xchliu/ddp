@@ -108,6 +108,10 @@ On the command line: -
 
 `% python emcomm.py`
 
+`% python fax_receive.py`
+
+`% python fax_send.py`
+
 `% python file_transfer.py`
 
 `% python httpproxy_server.py`
@@ -129,13 +133,9 @@ On the command line: -
 	* A *proof-of-concept* HTTP proxy server and client using the DDP protocol
 	* A simple repeater for repeating DDP packets using the DDP protocol
 	* A basic program for automating passing messages for EmComm using the DDP protocol
-  # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP) for guidance.
+	* A basic application which can send and receive faxes using the DDP protocol
+  # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP/EMCOMM/FAX) for guidance.
   # Error correction on the packets using Reed-Solomon(64,48).
-
-
-=Future Features=
-
-  # Some kind of authentication for the BBS example code, maybe a public/private key pair...
 
 
 
@@ -166,16 +166,7 @@ Untested.
 
 ==Microsoft Windows==
 
-Pylzma doesn't appear to have a package for Win32 so we have to use the egg...
-
-The easiest way to install the pylzma component on for Windows is to first install Python Eggs.  Installing PE is beyond the scope of this README, so visit http://mrtopf.de/blog/english-posts/a-small-introduction-to-python-eggs/ and goto the section "Where do I find Python Eggs?" you'll see download link for "ez_setup.py".
-Download and install that.  Once that's done, grab the latest egg file for your Python version from http://pypi.python.org/pypi/pylzma/0.4.2 and install using "easy_install".
-
-You can grab the latest pyserial package for Windows from here: http://pypi.python.org/pypi/pyserial/2.5
-
-Grab pysqlite from here for your version of Python: http://code.google.com/p/pysqlite/downloads/list
-
-Once this is all done, uncompress DDP in any folder but you may find it easier if extract to your system drive (usually C:\).  Then fire up the command prompt and change the directory to where you extracted DDP to and try running some of the examples, if you get a message about it cannot find Python change your PATH environment to include the Python installation directory and rerun the command prompt.
+The preferred method for using DDP on Windows is by using Cygwin.  Download the guide from the DDP website for using this option.  Running DDP outside of the Cygwin environment under Windows will become unsupported soon.
 
 
 
@@ -204,6 +195,16 @@ A. Let me know by raising it as an issue so I can fix it in the next version.
 Q. I would like a feature that's not in DDP...
 
 A. I'm currently not accepting feature requests as DDP is a protocol not a "final" product.
+
+
+Q. Can/Will you make DDP compatible with the existing packet radio system?
+
+A. No, DDP is aiming to replace it entirely.  However, there is nothing stopping someone from writing a wrapper program which does this - I will not write this myself and/or provide support to perform this.  DDP has many more features than the old packet system and it's actually faster when running over HF, DDP uses PSK500R by default which gives around 500 baud vs 300 baud for the old system.  DDP can also go crossband and specifications with its repeater code.
+
+
+Q. When using the FLDIGI backend, can use another datamode?
+
+A. Yes you can, just specify which datamode you want to use (in-case of the examples just change it in the XML file).  I prefer using PSK myself but you should not have any problems using another mode which supports the full ASCII character like MFSK (my second preferred datamode).  So using a datamode like RTTY won't work.
 
 
 
