@@ -202,7 +202,7 @@ Q. Can/Will you make DDP compatible with the existing packet radio system?
 A. No, DDP is aiming to replace it entirely.  However, there is nothing stopping someone from writing a wrapper program which does this - I will not write this myself and/or provide support to perform this.  DDP has many more features than the old packet system and it's actually faster when running over HF, DDP uses PSK500R by default which gives around 500 baud vs 300 baud for the old system.  DDP can also go crossband and specifications with its repeater code.
 
 
-Q. When using the FLDIGI backend, can use another datamode?
+Q. When using the FLDIGI backend, can I use another datamode?
 
 A. Yes you can, just specify which datamode you want to use (in-case of the examples just change it in the XML file).  I prefer using PSK myself but you should not have any problems using another mode which supports the full ASCII character like MFSK (my second preferred datamode).  So using a datamode like RTTY won't work.
 
