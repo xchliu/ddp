@@ -174,7 +174,7 @@ The preferred method for using DDP on Windows is by using Cygwin.  Download the 
 
 Q. What are the dependencies for this program?
 
-A. Python v2.6 or greater.  Modules used are base64, collections, hashlib, math, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
+A. Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
 
 Q. What operating systems does it support?
