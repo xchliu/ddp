@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.4.2 on 29/04/2011
+Danny's Digital Packet - Release v0.5.0 on 12/06/2011
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,17 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.5.0 - 12h June 2011==
+
+  # Please note the "ddp.py" file in example directory has been removed.  So if you want to use the examples copy the "ddp.py" file from the parent directory.
+  # DDP logging is now colourised to aid debugging.
+  # PyLZMA has been dropped and has been replaced by GZIP which is built-in to Python.
+  # Improved packet header and footer handling.
+  # Corrected a small issue when running with fldigi, when requesting the bytes it's zero based and I forgot to subtract one off.  This would have caused the odd exception but nothing major.
+  # A seperate timeout for the TCP ACK packet has been added.
+  # EC can be disabled on initialisation.
+
 
 ==v0.4.2 - 29th April 2011==
 
