@@ -8,7 +8,7 @@ For license and copyright, please see the LICENSE file.
 
 =Notes=
 
-==v0.5.0 - 12h June 2011==
+==v0.5.0 - 12th June 2011==
 
   # Please note the "ddp.py" file in example directory has been removed.  So if you want to use the examples copy the "ddp.py" file from the parent directory.
   # DDP logging is now colourised to aid debugging.
