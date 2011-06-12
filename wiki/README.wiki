@@ -156,7 +156,6 @@ On the command line: -
 
 Here are the packages I've currently got installed for DDP to work: -
 
-  * py26-lzma (/usr/ports/archivers/py-lzma/)
   * py26-numeric (/usr/ports/math/py-numeric/)
   * py26-pysqlite (/usr/ports/databases/py-pysqlite23/)
   * py26-serial (/usr/ports/comms/py-serial/)
@@ -185,7 +184,7 @@ The preferred method for using DDP on Windows is by using Cygwin.  Download the 
 
 *What are the dependencies for this program?*
 
-Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, pylzma`*`, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
+Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
 
 *What operating systems does it support?*
