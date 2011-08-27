@@ -1,5 +1,5 @@
 #labels Featured
-Danny's Digital Packet - Release v0.5.0 on 12/06/2011
+Danny's Digital Packet - Release v0.5.1 on 27/08/2011
 =====================================================
 Link: http://code.google.com/p/ddp/
 
@@ -7,6 +7,18 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.5.1 - 27th August 2011==
+
+  # New example code showing how DDP can be used to proxy XMLRPC traffic.  Should be compatible with all XMLRPC programs including (but not limited to) StormForce XR.  Please note, this isn't quick so increase the "update periods" to 15 minutes (900 seconds) in the SXR client - or better yet use the SXR mini client instead.  The server component sits with the actual XMLRPC host (e.g. SXR server) and the client goes with the XMLRPC client (e.g. SXR client).  Remember to change the client port number and URL to ensure it goes through the proxy.
+  # Introduced packet replay detection, this routine will prevent the exact same packet from re-sent if it has already been processed by DDP.
+  # Ensured when using FLDIGI we unlock the program first before attempting to change parameters.
+  # Callsign verification using RSA public/private key pair signatures.  Read the PROTOCOL document on how this is implemented.  You'll need M2Crypto installed for this to work.
+  # New example code showing how to transfer your RSA public key using DDP.
+  # The crypto (RSA signatures) can be disabled on initialisation.
+  # Allowing unsigned packets can be allowed on initialisation.
+  # Corrected the repeater example code which no longer ran after introducing the TCP ACK timeout in the last version.
+  # Example code XML setting files now reflect the new crypto options.
 
 ==v0.5.0 - 12th June 2011==
 
@@ -131,7 +143,13 @@ On the command line: -
 
 `% python im_chat.py`
 
+`% python kex.py`
+
 `% python repeater.py`
+
+`% python xr_client.py`
+
+`% python xr_server.py`
 
 
 =Current Features=
@@ -145,8 +163,11 @@ On the command line: -
 	* A simple repeater for repeating DDP packets using the DDP protocol
 	* A basic program for automating passing messages for EmComm using the DDP protocol
 	* A basic application which can send and receive faxes using the DDP protocol
+	* A basic XMLRPC server and client proxy which will allow applications which use XMLRPC to send traffic using the DDP protocol
+	* A basic key exchange (KEX) program for transferring your public keys using the DDP protocol
   # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP/EMCOMM/FAX) for guidance.
   # Error correction on the packets using Reed-Solomon(64,48).
+  # Callsign signatures using RSA public/private key pairs.
 
 
 
@@ -156,6 +177,7 @@ On the command line: -
 
 Here are the packages I've currently got installed for DDP to work: -
 
+  * py26-m2crypto (/usr/ports/security/py-m2crypto/)
   * py26-numeric (/usr/ports/math/py-numeric/)
   * py26-pysqlite (/usr/ports/databases/py-pysqlite23/)
   * py26-serial (/usr/ports/comms/py-serial/)
@@ -184,7 +206,7 @@ The preferred method for using DDP on Windows is by using Cygwin.  Download the 
 
 *What are the dependencies for this program?*
 
-Python v2.6 or greater.  Modules used are collections, hashlib, math, pypng, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
+Python v2.6 or greater.  Modules used are collections, hashlib, math, m2crypto`*`, pypng, serial`*`, socket, threading, time and xmlrpclib.  `*` - External package which requires installing since it's not normally installed by default.
 
 
 *What operating systems does it support?*
