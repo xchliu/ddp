@@ -168,16 +168,16 @@ DDP has numerous features which aren't in any other form of packet radio, here i
 
   # `*``*``*` You must have fldigi installed on your PC as well as enabling the XMLRPC protocol, see the help documents for fldigi for more information!  That's if you want to use fldigi that is... `*``*``*`
   # Contains example code for: -
-	* A very basic BBS server and client using the DDP protocol
-	* A basic IM chat program using the DDP protocol
-	* A basic file transfer program using the DDP protocol
-	* A *proof-of-concept* HTTP proxy server and client using the DDP protocol
-	* A simple repeater for repeating DDP packets using the DDP protocol
-	* A basic program for automating passing messages for EmComm using the DDP protocol
-	* A basic application which can send and receive faxes using the DDP protocol
-	* A basic XMLRPC server and client proxy which will allow applications which use XMLRPC to send traffic using the DDP protocol
-	* A basic key exchange (KEX) program for transferring your public keys using the DDP protocol
-        * A basic mail exchanger (MX) for sending and receiving emails using DDP protocol
+  * A very basic BBS server and client using the DDP protocol
+  * A basic IM chat program using the DDP protocol
+  * A basic file transfer program using the DDP protocol
+  * A *proof-of-concept* HTTP proxy server and client using the DDP protocol
+  * A simple repeater for repeating DDP packets using the DDP protocol
+  * A basic program for automating passing messages for EmComm using the DDP protocol
+  * A basic application which can send and receive faxes using the DDP protocol
+  * A basic XMLRPC server and client proxy which will allow applications which use XMLRPC to send traffic using the DDP protocol
+  * A basic key exchange (KEX) program for transferring your public keys using the DDP protocol
+  * A basic mail exchanger (MX) for sending and receiving emails using DDP protocol
   # You can include the ddp.py to get support of the protocol in your project - look at the example code (BBS/IM/FT/HP/EMCOMM/FAX/KEX/MX) for guidance.
   # Error correction on the packets using Reed-Solomon(64,48).
   # Callsign signatures using RSA public/private key pairs to help prevent callsign abuse.
