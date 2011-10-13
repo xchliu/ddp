@@ -1,7 +1,7 @@
 #labels Featured
-Danny's Digital Packet - Release v0.5.2 on 13/10/2011
-=====================================================
-Link: http://code.google.com/p/ddp/
+=Danny's Digital Packet - Release v0.5.2 on 13/10/2011=
+
+Link: [http://code.google.com/p/ddp/]
 
 For license and copyright, please see the LICENSE file.
 
