@@ -1,12 +1,19 @@
 #labels Featured
-=Danny's Digital Packet - Release v0.5.3 on 10/01/2012=
+=Danny's Digital Packet - Release v0.5.4 on 25/01/2012=
 
 Link: [http://code.google.com/p/ddp/]
 
 For license and copyright, please see the LICENSE file.
 
+*Please note the README file in the download will contain more up-to-date information than this wiki page*
+
 
 =Notes=
+
+==v0.5.4 - 25th January 2012==
+ # Introduced a new short message specification (SMS for short) designed to send basic text-only packets.  Please read the PROTOCOL document for more information.
+ # The 7-bit protocol now hex encodes the flags section, same as the new SMS spec.  Please read the PROTOCOL document for more information.
+ # The sequence section in the packet has now been removed from all specifications.  Please read the PROTOCOL document for more information.
 
 ==v0.5.3 - 10th January 2012==
  # Improved constructPacket() to use bytearray() for 7-bit specification.
