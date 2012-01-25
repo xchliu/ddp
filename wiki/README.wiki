@@ -5,7 +5,7 @@ Link: [http://code.google.com/p/ddp/]
 
 For license and copyright, please see the LICENSE file.
 
-*Please note the README file in the download will contain more up-to-date information than this wiki page*
+*Please note the README file in the download will contain more up-to-date information than this wiki page.*
 
 
 =Notes=
