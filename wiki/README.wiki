@@ -1,5 +1,5 @@
 #labels Featured
-=Danny's Digital Packet - Release v0.5.4 on 25/01/2012=
+=Danny's Digital Packet - Release v0.6.0 on 11/02/2012=
 
 Link: [http://code.google.com/p/ddp/]
 
@@ -9,6 +9,12 @@ For license and copyright, please see the LICENSE file.
 
 
 =Notes=
+
+==v0.6.0 - 11th February 2012==
+ # The specifications have now been split up into separate modules, this allows easier updating as well as adding new specifications without changing the core code.  Remember to copy the specification files if you're upgrading from a previous version.
+ # Introduced a new specification based on the SMS specification which allows binary transfer (specification ID 3).  Please read the PROTOCOL document for more information.
+ # You can now define if you want the logging colour coded, by default it's turned on.
+ # Further improved the transmitter keying code, especially when running under FLDIGI.
 
 ==v0.5.4 - 25th January 2012==
  # Introduced a new short message specification (SMS for short) designed to send basic text-only packets.  Please read the PROTOCOL document for more information.
