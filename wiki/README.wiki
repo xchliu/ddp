@@ -10,6 +10,27 @@ For license and copyright, please see the LICENSE file.
 
 =Notes=
 
+==v0.6.1 - 27th August 2012==
+
+ # DDP now has the concept of broadcast packets, these kind of packets are sent out with no intention of being replied to - they are sent in UDP with the destination callsign "BROADCAST".  They are for informative purposes only - e.g. "Server is going down at 1200GMT", "Power failure at repeater", etc - I'm sure you can find other uses for this as well.  You can enable receiving broadcast packets in your client apps by passing "ignore_broadcast_packets = False" to the init() function - by default broadcast packets will be NOT passed to the client apps.
+ # Existing examples updated to ignore broadcast packets since they don't need to deal with those kind of packets.
+ # New example code showing how to send and receive broadcast packets.
+ # All examples now use the builtin library "sqlite3" in Python - don't know why I didn't use this earlier.
+ # DDP is now aimed for Python v2.7 - please update your packages.
+ # Slightly improved the speed of the receivePacket() sub when running in RS-232 mode.
+ # The protocol header and footer have changed - please review the PROTOCOL document.
+ # Packet searching in the receivePacket() is now done backwards to avoid picking multiple partial packets.
+ # DDP logging now shows the date and time including the microseconds.
+ # Improved the speed of receiveRawPacket() and also added extra timing checking when writing data in RS-232 mode.
+ # Improved the logging feature (using my new class "DanLog" - don't forget to copy that Python file as well), please ensure you update the specification files as well if you're upgrading.
+ # All the example code now uses my new logging module.
+ # New flag indicating whether the data should be returned to the client application - for advanced use only.  Please review the PROTOCOL document.  Fax example code has been updated.
+ # Few typos and invalid packet transfer example in the PROTOCOL file - corrected.  Please re-read it.
+15. Experimental FDMDV modem provided by Codec2 - set your datamode to "FDMDV".  *** Please note that only the TX side is currently implemented and this feature is highly experimental and is only available to Unix-like OSes since the "ossaudiodev" python library is used (not available under Cygwin). ***  Follow the Codec2 installation instructions in the DDV v0.2.0 README file.
+ # Improved the error logic in receiveDataFromAny() subroutine.
+ # Raw packets are now verified (by default) using the new subroutine validatePacket() before transmission to avoid transmitting bad packets - can be turned off by passing "verify_packet_before_tx = False" to init() subroutine.  This subroutine is part of DDP not the specification modules.
+ # Fixed a bug when running in RS-232 mode where the same packet could be parsed (technically it would fail to be parsed for a reason) until the serial buffer overflows.
+
 ==v0.6.0 - 11th February 2012==
  # The specifications have now been split up into separate modules, this allows easier updating as well as adding new specifications without changing the core code.  Remember to copy the specification files if you're upgrading from a previous version.
  # Introduced a new specification based on the SMS specification which allows binary transfer (specification ID 3).  Please read the PROTOCOL document for more information.
