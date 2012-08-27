@@ -1,5 +1,5 @@
 #labels Featured
-=Danny's Digital Packet - Release v0.6.0 on 11/02/2012=
+=Danny's Digital Packet - Release v0.6.1 on 27/08/2012=
 
 Link: [http://code.google.com/p/ddp/]
 
@@ -26,7 +26,7 @@ For license and copyright, please see the LICENSE file.
  # All the example code now uses my new logging module.
  # New flag indicating whether the data should be returned to the client application - for advanced use only.  Please review the PROTOCOL document.  Fax example code has been updated.
  # Few typos and invalid packet transfer example in the PROTOCOL file - corrected.  Please re-read it.
-15. Experimental FDMDV modem provided by Codec2 - set your datamode to "FDMDV".  *** Please note that only the TX side is currently implemented and this feature is highly experimental and is only available to Unix-like OSes since the "ossaudiodev" python library is used (not available under Cygwin). ***  Follow the Codec2 installation instructions in the DDV v0.2.0 README file.
+15. Experimental FDMDV modem provided by Codec2 - set your datamode to "FDMDV".  Please note that only the TX side is currently implemented and this feature is highly experimental and is only available to Unix-like OSes since the "ossaudiodev" python library is used (not available under Cygwin).  Follow the Codec2 installation instructions in the DDV v0.2.0 README file.
  # Improved the error logic in receiveDataFromAny() subroutine.
  # Raw packets are now verified (by default) using the new subroutine validatePacket() before transmission to avoid transmitting bad packets - can be turned off by passing "verify_packet_before_tx = False" to init() subroutine.  This subroutine is part of DDP not the specification modules.
  # Fixed a bug when running in RS-232 mode where the same packet could be parsed (technically it would fail to be parsed for a reason) until the serial buffer overflows.
